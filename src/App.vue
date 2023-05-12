@@ -8,7 +8,7 @@
                 </h2>
                 <div class="flex items-center">
                     <input type="text"
-                        class="text-3xl sm:text-5xl bg-transparent placeholder:text-gray-300 backdrop-blur-lg text-center"
+                        class="text-3xl sm:text-5xl bg-transparent placeholder:text-gray-400 backdrop-blur-lg text-center"
                         placeholder="도시명을 영어로 입력해주세요" v-model="cityName" @keydown.enter="getWeather" />
                     <button class="w-12 border-gray-400 p-2 rounded-md" @click="getWeather"><img src="@/assets/check.png" alt="확인"></button>
                 </div>

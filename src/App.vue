@@ -22,7 +22,7 @@
             </ul>
         </div>
         <div
-            class="flex flex-wrap md:max-w-7xl md:mx-auto md:justify-start border-x-2 border-t-2 border-white rounded-t-2xl bg-slate-200 bg-opacity-50 justify-center h-[50vh] md:h-[65vh] overflow-y-scroll md:overflow-visible">
+            class="flex flex-wrap md:max-w-7xl md:mx-auto md:justify-start border-2 border-white rounded-2xl bg-slate-200 bg-opacity-50 justify-center h-[50vh] md:h-[65vh] overflow-y-scroll md:overflow-visible">
             <p class="font-extrabold  text-2xl md:text-4xl mt-2 sm:mt-5 sm:max-w-7xl sm:mx-auto text-center md:basis-full">5일간 일기예보</p>
             <div v-for="el in localTime" :key="el" class="m-1 basis-full md:basis-48 flex items-center">
                 <img :src="`https://openweathermap.org/img/w/${el.icon}.png`" alt="날씨아이콘" class="" />
@@ -65,8 +65,6 @@ export default {
                 ])
                 .then(
                     axios.spread((res1, res2) => {
-                        console.log(res1)
-                        console.log(res2)
                         // 현재기온
                         this.city = res1.data;
                         this.tempItem = res1.data.main;
@@ -120,7 +118,7 @@ export default {
                 })
             )
             .catch((error) => {
-                console.log(error.response.status);
+                alert(error.message + "\n\n도시명을 확인해주세요")
             });
     },
     

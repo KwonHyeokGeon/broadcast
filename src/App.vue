@@ -1,12 +1,12 @@
 <template>
-    <div class="w-full bg-fixed" :style="{ backgroundImage: 'url(' + require(`@/assets/images/${weatherIcon}.jpg`) + ')' }">
-        <div class="sm:max-w-7xl sm:mx-auto h-[50vh] md:h-[35vh]">
+    <div class="w-full h-screen bg-fixed overflow-hidden" :style="{ backgroundImage: 'url(' + require(`@/assets/images/${weatherIcon}.jpg`) + ')' }">
+        <div class="sm:max-w-7xl sm:mx-auto">
             <div class="flex flex-wrap justify-between items-center">
-                <h2 v-if="showWeather" class="text-8xl sm:text-9xl font-black pt-2 mb-10 relative "
+                <h2 v-if="showWeather" class="text-8xl sm:text-9xl font-black pt-2 mb-3 md:mb-10 relative "
                     style="font-family: 'Vidaloka'">
                     {{ city.name }}
                 </h2>
-                <div class="flex items-center">
+                <div class="flex flex-col md:flex-row items-center">
                     <input type="text"
                         class="text-3xl sm:text-5xl bg-transparent placeholder:text-gray-300 backdrop-blur-lg text-center"
                         placeholder="도시명을 영어로 입력해주세요" v-model="cityName" @keydown.enter="getWeather" />
@@ -14,16 +14,16 @@
                 </div>
             </div>
             <ul class="flex sm:justify-around flex-col sm:flex-row backdrop-blur-lg mt-2">
-                <li class="text-3xl text-white font-medium inline-block">온도 : {{ Math.round(tempItem.temp - 273.15)
+                <li class="md:text-3xl text-xl text-white font-medium inline-block">온도 : {{ Math.round(tempItem.temp - 273.15)
                 }}&#8451;</li>
-                <li class="text-3xl text-white font-medium inline-block">풍속 : {{ windItem.speed }}m/s</li>
-                <li class="text-3xl text-white font-medium inline-block">일출 : {{ sunRise }}</li>
-                <li class="text-3xl text-white font-medium inline-block">일몰 : {{ sunSet }}</li>
+                <li class="md:text-3xl text-xl text-white font-medium inline-block">풍속 : {{ windItem.speed }}m/s</li>
+                <li class="md:text-3xl text-xl text-white font-medium inline-block">일출 : {{ sunRise }}</li>
+                <li class="md:text-3xl text-xl text-white font-medium inline-block">일몰 : {{ sunSet }}</li>
             </ul>
         </div>
         <div
             class="flex flex-wrap md:max-w-7xl md:mx-auto md:justify-start border-x-2 border-t-2 border-white rounded-t-2xl bg-slate-200 bg-opacity-50 justify-center h-[50vh] md:h-[65vh] overflow-y-scroll md:overflow-visible">
-            <p class="font-extrabold text-4xl mt-2 sm:mt-5 sm:max-w-7xl sm:mx-auto text-center md:basis-full">5일간 일기예보</p>
+            <p class="font-extrabold  text-2xl md:text-4xl mt-2 sm:mt-5 sm:max-w-7xl sm:mx-auto text-center md:basis-full">5일간 일기예보</p>
             <div v-for="el in localTime" :key="el" class="m-1 basis-full md:basis-48 flex items-center">
                 <img :src="`https://openweathermap.org/img/w/${el.icon}.png`" alt="날씨아이콘" class="" />
                 <p class="font-semibold">

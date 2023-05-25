@@ -6,9 +6,9 @@
                     style="font-family: 'Vidaloka'">
                     {{ city.name }}
                 </h2>
-                <div class="flex flex-col md:flex-row items-center">
+                <div class="flex flex-col w-full md:flex-row items-center">
                     <input type="text"
-                        class="text-3xl sm:text-5xl bg-transparent placeholder:text-gray-400 backdrop-blur-lg text-center"
+                        class="text-2xl  text-center sm:text-5xl bg-transparent placeholder:text-2xl md:placeholder:text-5xl placeholder:text-gray-700 backdrop-blur-lg"
                         placeholder="도시명을 영어로 입력해주세요" v-model="cityName" @keydown.enter="getWeather" />
                     <button class="w-12 border-gray-400 p-2 rounded-md" @click="getWeather"><img src="@/assets/check.png" alt="확인"></button>
                 </div>

@@ -6,11 +6,10 @@
   <br>
   BroadCast
 
-  ![alt](![thumbnail])
+![Broadcast Thumbnail](./public/broadcast.png)  
   <br>
 </p>
 
-목차
 
 ## 프로젝트 소개
 
@@ -52,4 +51,3 @@ Axios
 
 <br>
 
-[thumbnail]:/public/broadcast.png

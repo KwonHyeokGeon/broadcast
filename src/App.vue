@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full h-screen py-20 bg-fixed overflow-hidden" :style="{ backgroundImage: 'url(' + require(`@/assets/images/${weatherIcon}.jpg`) + ')' }">
+    <div class="w-full h-max bg-fixed overflow-hidden" :style="{ backgroundImage: 'url(' + require(`@/assets/images/${weatherIcon}.jpg`) + ')' }">
         <div class="sm:max-w-7xl sm:mx-auto">
             <div class="flex flex-wrap justify-between items-center">
                 <h2 v-if="showWeather" class="text-8xl sm:text-9xl font-black pt-2 mb-3 md:mb-10 relative "
@@ -22,7 +22,7 @@
             </ul>
         </div>
         <div
-            class="flex flex-wrap md:max-w-7xl md:mx-auto md:justify-start border-2 border-white rounded-2xl bg-slate-200 bg-opacity-50 justify-center h-[50vh] md:h-[65vh] overflow-y-scroll md:overflow-visible">
+            class="flex flex-wrap md:max-w-7xl md:mx-auto md:justify-start border-2 border-white rounded-2xl bg-slate-200 bg-opacity-50 justify-center h-[50vh] md:h-[65vh] overflow-y-scroll broadcast scroll-m-10">
             <p class="font-extrabold  text-2xl md:text-4xl mt-2 sm:mt-5 sm:max-w-7xl sm:mx-auto text-center md:basis-full">5일간 일기예보</p>
             <div v-for="el in localTime" :key="el" class="m-1 basis-full md:basis-48 flex items-center">
                 <img :src="`https://openweathermap.org/img/w/${el.icon}.png`" alt="날씨아이콘" class="" />
@@ -129,4 +129,12 @@ export default {
 body {
     font-family: 'Pretendard-Regular';
 }
+.broadcast::-webkit-scrollbar{
+    width: 8px;
+}
+.broadcast::-webkit-scrollbar-thumb{
+    background: #217af4;
+    border-radius: 10px;
+}
+
 </style>

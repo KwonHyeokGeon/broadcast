@@ -29,7 +29,8 @@ Vue
 TailwindCSs
 <br>
 Axios
-
+<br>
+Yarn
 <br>
 
 ## 구현 기능

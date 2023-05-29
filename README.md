@@ -6,11 +6,10 @@
   <br>
   BroadCast
 
-  [thumbnail]
+    ![alt](![thumbnail])
   <br>
 </p>
 
-목차
 
 ## 프로젝트 소개
 

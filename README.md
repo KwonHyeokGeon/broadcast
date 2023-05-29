@@ -6,7 +6,7 @@
   <br>
   BroadCast
 
-    ![alt](![thumbnail])
+![Broadcast Thumbnail](./public/broadcast.png)  
   <br>
 </p>
 
@@ -51,4 +51,3 @@ Axios
 
 <br>
 
-[thumbnail]:/public/broadcast.png

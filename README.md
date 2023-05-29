@@ -6,7 +6,7 @@
   <br>
   BroadCast
 
-  [thumbnail]
+  ![alt](![thumbnail])
   <br>
 </p>
 

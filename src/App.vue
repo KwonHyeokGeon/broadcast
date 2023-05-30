@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full h-max bg-fixed overflow-hidden" :style="{ backgroundImage: 'url(' + require(`@/assets/images/${weatherIcon}.jpg`) + ')' }">
+    <div class="w-full h-screen bg-fixed overflow-hidden" :style="{ backgroundImage: 'url(' + require(`@/assets/images/${weatherIcon}.jpg`) + ')' }">
         <div class="sm:max-w-7xl sm:mx-auto">
             <div class="flex flex-wrap justify-between items-center">
                 <h2 v-if="showWeather" class="text-8xl sm:text-9xl font-black pt-2 mb-3 md:mb-10 relative "

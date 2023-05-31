@@ -28,10 +28,10 @@ Vue
 <br>
 TailwindCSs
 <br>
-Axios
-<br>
 Yarn
 <br>
+### libray
+Axios
 
 ## 구현 기능
 

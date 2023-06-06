@@ -47,7 +47,6 @@ axios.all([<br>
 :style="{ backgroundImage: 'url(' + require(`@/assets/images/${weatherIcon}.jpg`) + ')' }"
 ### 기능 3
 모바일화면에서 일기예보영역을 overflow-scroll처리하여 반응형을 구현했습니다.
-### 기능 4
 
 <br>
 

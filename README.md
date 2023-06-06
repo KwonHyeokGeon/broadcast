@@ -37,9 +37,7 @@ Axios
 ### 기능 2
 현재 기상정보에 맞추어 Background-image 변경
 <br>
-
----<div class="w-full h-max bg-fixed overflow-hidden" :style="{ backgroundImage: 'url(' + require(`@/assets/images/${weatherIcon}.jpg`) + ')' }">---
-  
+:style="{ backgroundImage: 'url(' + require(`@/assets/images/${weatherIcon}.jpg`) + ')' }"
 ### 기능 3
 5일 간의 기상정보 제공
 ### 기능 4
